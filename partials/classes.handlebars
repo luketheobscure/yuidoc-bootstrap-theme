@@ -79,6 +79,9 @@
         {{#if events}}
             <li><a data-toggle="tab" href="#events">Events</a></li>
         {{/if}}
+        {{#if actions}}
+            <li><a data-toggle="tab" href="#actions">Actions</a></li>
+        {{/if}}
     </ul>
 
     <div class="tab-content">
@@ -200,6 +203,16 @@
                 {{#events}}
                     {{>events}}
                 {{/events}}
+            </div>
+        {{/if}}
+
+        {{#if actions}}
+            <div id="actions" class="tab-pane">
+                <h2 class="off-left">Actions</h2>
+
+                {{#actions}}
+                    {{>actions}}
+                {{/actions}}
             </div>
         {{/if}}
     </div>
