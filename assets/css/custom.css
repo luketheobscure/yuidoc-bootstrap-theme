@@ -65,6 +65,10 @@
     margin-top: 65px;
 }
 
+#class-info, #class-description {
+    margin-bottom: 15px
+}
+
 .content {
     padding-bottom: 50px;
 }

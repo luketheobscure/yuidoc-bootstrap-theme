@@ -2,7 +2,7 @@
     <h1>{{name}} <small>Class</small></h1>
 </div>
 
-<div class="well well-small">
+<div id="class-info">
     {{#if uses}}
         <div class="uses">
             Uses
@@ -16,22 +16,22 @@
 
     {{#if extends}}
         <div class="extends">
-            Extends {{#crossLink extends}}{{/crossLink}}
+            <strong>Extends: </strong> {{#crossLink extends}}{{/crossLink}}
         </div>
     {{/if}}
 
     {{#if foundAt}}
         <div class="foundat">
-            Defined in: <a href="{{foundAt}}">`{{{file}}}:{{{line}}}`</a>
+            <strong>Defined in: </strong><a href="{{foundAt}}">`{{{file}}}:{{{line}}}`</a>
         </div>
     {{/if}}
 
     {{#if module}}
         {{#if submodule}}
-            Module: {{#crossLinkModule submodule}}{{/crossLinkModule}}<br>
-            Parent Module: {{#crossLinkModule module}}{{/crossLinkModule}}
+            <strong>Module:</strong> {{#crossLinkModule submodule}}{{/crossLinkModule}}<br>
+            <strong>Parent Module:</strong> {{#crossLinkModule module}}{{/crossLinkModule}}
         {{else}}
-            Module: {{#crossLinkModule module}}{{/crossLinkModule}}
+            <strong>Module:</strong> {{#crossLinkModule module}}{{/crossLinkModule}}
         {{/if}}
     {{/if}}
 
@@ -52,7 +52,7 @@
     </div>
 {{/if}}
 
-<div class="well well-small">
+<div id="class-description">
     {{{classDescription}}}
 </div>
 
@@ -83,6 +83,8 @@
             <li><a data-toggle="tab" href="#actions">Actions</a></li>
         {{/if}}
     </ul>
+
+    {{>options}}
 
     <div class="tab-content">
         <div id="index" class="tab-pane active">
